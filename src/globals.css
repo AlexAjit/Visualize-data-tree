@@ -1,0 +1,18 @@
+/* src/styles/globals.css */
+
+/* Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: Custom fonts, colors, or other global styles */
+body {
+  font-family: 'Inter', sans-serif; /* Add your custom font if needed */
+}

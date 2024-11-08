@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import LeftBox from '../src/components/LeftBox';
-import RightBox from '../src/components/RightBox';
-import ActivityLog from '../src/components/ActivityLog';
-import TopMenu from '../src/components/TopMenu';
+import LeftBox from '../components/LeftBox';
+import RightBox from '../components/RightBox';
+import ActivityLog from '../components/ActivityLog';
+import TopMenu from '../components/TopMenu';
 
 const HomePage: React.FC = () => {
   const [input, setInput] = useState('');
