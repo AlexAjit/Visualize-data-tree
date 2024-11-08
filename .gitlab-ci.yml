@@ -1,0 +1,19 @@
+stages:
+  - test
+  - deploy
+
+test-job:
+  stage: test
+  image: node:18
+  before_script:
+    - npm install
+  script:
+    - npm test
+  artifacts:
+    when: always
+    paths:
+      - coverage/
+    expire_in: 1 day
+  only:
+    - merge_requests
+    - main
