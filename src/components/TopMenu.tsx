@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const TopMenu: React.FC = () => {
-  const [isOperator, setIsOperator] = useState(true);
+interface TopMenuProps {
+  toggleSidebar: () => void;  // toggle sidebar function for visibilty
+  isSidebarOpen: boolean;     // Boolean to control the sidebar state
+}
 
-  const toggleMode = () => {
-    setIsOperator(!isOperator);
-  };
-
+const TopMenu: React.FC<TopMenuProps> = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <div className="w-full bg-white text-dark-blue p-4 shadow flex justify-between items-center">
-      <h1 className="text-2xl font-bold text-blue-800">Visualize Content in ASCII</h1>
-      <button
-        onClick={toggleMode}
-        className="px-4 py-2 border border-gray-400 rounded hover:bg-gray-200 transition duration-200"
-      >
-        {isOperator ? 'Operator' : 'Conditions'}
+    <div className="w-full p-4 bg-gray-800 flex items-center justify-between">
+      {/* <h1 className="text-white text-lg">Folder Structure</h1>   */}
+      <button onClick={toggleSidebar} className="text-white">
+        {isSidebarOpen ? 'Close' : '☰'} 
       </button>
+      <h1 className="text-white text-lg">Tree-RAM</h1>
     </div>
   );
 };

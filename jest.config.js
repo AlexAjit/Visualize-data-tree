@@ -28,4 +28,4 @@ const customJestConfig = {
   coverageReporters: ["text", "lcov", "clover"],  // You can adjust these based on your needs
 };
 
-module.exports = createJestConfig(customJestConfig);
+module.exports = createJestConfig(customJestConfig)
